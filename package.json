@@ -1,0 +1,38 @@
+{
+  "name": "Shiba",
+  "version": "0.1.0",
+  "license": "AGPL-1.0",
+  "engines": {
+    "node": "^0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kungfuant/shiba.git"
+  },
+  "dependencies": {
+    "async-cache": "^1.0.0",
+    "autobahn": "^0.9.6",
+    "co": "^4.5.4",
+    "co-pg": "^1.3.1",
+    "co-request": "^0.2.1",
+    "debug": "^2.2.0",
+    "jq-html-parser": "^0.3.0",
+    "lodash": "^3.9.3",
+    "microtime": "^1.4.2",
+    "money": "^0.2.0",
+    "open-exchange-rates": "^0.3.0",
+    "pg": "^4.3.0",
+    "poloniex.js": "^0.0.6",
+    "socket.io-client": "^1.3.5",
+    "socket.io-client-cookie": "^0.1.0",
+    "ws": "^0.7.2"
+  },
+  "devDependencies": {
+    "jison": "^0.4.15"
+  },
+  "scripts": {
+    "start": "env $(cat .env | xargs) node --harmony Shiba.js",
+    "start-dev": "env $(cat .env | xargs) nodemon --harmony Shiba.js",
+    "build": "jison -p lr Convert.jison"
+  }
+}
